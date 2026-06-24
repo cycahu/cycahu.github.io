@@ -1,0 +1,12 @@
+title: cycahu 的博客
+description: 我的个人博客
+url: "https://cycahu.github.io"
+baseurl: ""
+
+markdown: kramdown
+
+kramdown:
+  input: GFM
+  math_engine: mathjax
+
+permalink: /:year/:month/:day/:title/
