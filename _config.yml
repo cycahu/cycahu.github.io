@@ -10,3 +10,16 @@ kramdown:
   math_engine: mathjax
 
 permalink: /:year/:month/:day/:title/
+
+plugins:
+  - jekyll-paginate
+
+paginate: 10
+paginate_path: "/page:num/"
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      comments: true

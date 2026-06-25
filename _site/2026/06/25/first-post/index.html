@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>
-    {% if page.title %}{{ page.title }} · {% endif %}{{ site.title }}
+    Hello, World! · cycahu 的博客
   </title>
 
   <style>
@@ -95,28 +95,56 @@
 
 <body>
   <header class="site-header">
-    <a href="{{ '/' | relative_url }}">
-      <strong>{{ site.title }}</strong>
+    <a href="/">
+      <strong>cycahu 的博客</strong>
     </a>
 
     <nav>
-      <a href="{{ '/' | relative_url }}">首页</a>
-      <a href="{{ '/about/' | relative_url }}">关于</a>
+      <a href="/">首页</a>
+      <a href="/about/">关于</a>
     </nav>
   </header>
 
   <hr>
 
   <main>
-    {{ content }}
+    <h1 id="hello-world">Hello, World!</h1>
 
-    {% if page.comments %}
+<p>在和 ChatGPT-5.5 Plus 大战了一个晚上后成功搭建了本博客, prompt 为</p>
+
+<blockquote>
+  <p>mac, 用 jekyll 和仓库 cycahu.github.io 搭建一个支持 markdown 和数学公式的个人博客 给出最简单直接的步骤.</p>
+</blockquote>
+
+<p>随后又要求 ChatGPT-5.5 Plus 加入了行内公式, 翻页, 评论等功能.</p>
+
+<p>测试一下数学公式: 若 $f$ 可导, 且 $f’$ 在 $[a,b]$ 上 Riemann 可积, 则有 Newton-Leibniz 公式</p>
+
+\[\int_a^b f'(x)dx = f(b) - f(a).\]
+
+
+
+    
       <section class="comments-section">
         <hr>
         <h2>评论</h2>
-        {% include comments.html %}
+        <script src="https://giscus.app/client.js"
+        data-repo="cycahu/cycahu.github.io"
+        data-repo-id="R_kgDOTEZJTQ"
+        data-category="Announcements"
+        data-category-id="DIC_kwDOTEZJTc4C_1c7"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="light"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
       </section>
-    {% endif %}
+    
   </main>
 </body>
 </html>

@@ -1,0 +1,55 @@
+---
+layout: default
+title: 首页
+---
+
+<p>欢迎来到 cycahu 的博客! 主要是一些奇怪的故事和想法, 可能会有部分数学或者算法竞赛相关内容. 注意, 除学术相关外, 全部内容均为<b>虚构</b>. </p>
+
+<h2>文章列表</h2>
+
+{% if paginator %}
+  {% assign posts = paginator.posts %}
+{% else %}
+  {% assign posts = site.posts %}
+{% endif %}
+
+{% if posts.size > 0 %}
+  {% for post in posts %}
+  <article>
+    <a href="{{ post.url | relative_url }}">
+      {{ post.title }}
+    </a>
+    {{ post.date | date: "%Y-%m-%d" }}
+  </article>
+  <hr>
+  {% endfor %}
+
+{% else %}
+  <p>暂时没有文章。</p>
+{% endif %}
+
+{% if paginator and paginator.total_pages > 1 %}
+<nav class="pagination">
+
+  {% if paginator.previous_page %}
+    <a href="{{ paginator.previous_page_path | relative_url }}">
+      ← 上一页
+    </a>
+  {% else %}
+    <span>← 上一页</span>
+  {% endif %}
+
+  <span>
+    第 {{ paginator.page }} / {{ paginator.total_pages }} 页
+  </span>
+
+  {% if paginator.next_page %}
+    <a href="{{ paginator.next_page_path | relative_url }}">
+      下一页 →
+    </a>
+  {% else %}
+    <span>下一页 →</span>
+  {% endif %}
+
+</nav>
+{% endif %}
