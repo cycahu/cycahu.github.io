@@ -8,7 +8,7 @@ date: 2026-06-26
 
 大一上, 刚入学的时候对一切都充满好奇, 入学的第一天在寝室的阳台上拍了张照片.
 
-![p1](https://github.com/cycahu/cycahu.github.io/raw/main/_pictures/2026-06-26-beijingnan-p1.jpg)
+<!-- ![p1](https://github.com/cycahu/cycahu.github.io/raw/main/_pictures/2026-06-26-beijingnan-p1.jpg) -->
 
 
 选的课很少, 也没什么学业压力, 玩的很开心, 上学期很快就过完了.
@@ -27,7 +27,7 @@ date: 2026-06-26
 
 昨晚突然深切地意识到, 真的是最后一天在紫荆住了啊, 去阳台拍了张同样角度的照片.
 
-![p2](https://github.com/cycahu/cycahu.github.io/raw/main/_pictures/2026-06-26-beijingnan-p2.jpg)
+<!-- ![p2](https://github.com/cycahu/cycahu.github.io/raw/main/_pictures/2026-06-26-beijingnan-p2.jpg) -->
 
 睡觉前, 在床上盯着天花板看了一会, 恍惚间回到了一中的宿舍, 却已经无法切实地感受那时的心境了. 一切都在不可抗地向前走, 我难以抓住什么. 这个学期, 我时常看到自己学不会告别.
 
