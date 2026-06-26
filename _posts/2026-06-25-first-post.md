@@ -12,6 +12,8 @@ date: 2026-06-25
 
 随后又要求 ChatGPT-5.5 Plus 加入了行内公式, 翻页, 并用 giscus 实现了评论功能.
 
+安装了一些我也不太懂具体是干啥的东西, `bundle exec jekyll serve --livereload` 可以在本地预览.
+
 测试一下数学公式: 若 $f$ 可导, 且 $f'$ 在 $[a,b]$ 上 Riemann 可积, 则有 Newton-Leibniz 定理
 
 $$
