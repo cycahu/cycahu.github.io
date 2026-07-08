@@ -16,10 +16,10 @@ title: 首页
 {% if posts.size > 0 %}
   {% for post in posts %}
   <article>
+    {{ post.date | date: "%Y-%m-%d" }}: 
     <a href="{{ post.url | relative_url }}">
       {{ post.title }}
     </a>
-    {{ post.date | date: "%Y-%m-%d" }}
   </article>
   <hr>
   {% endfor %}
