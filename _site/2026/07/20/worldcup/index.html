@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>
+    Jacobian conjecture · cycahu 的博客
+  </title>
+
+  <style>
+    body {
+      max-width: 760px;
+      margin: 40px auto;
+      padding: 0 20px;
+      font: 17px/1.7 -apple-system, BlinkMacSystemFont,
+            "Segoe UI", sans-serif;
+    }
+
+    header a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    pre {
+      padding: 16px;
+      overflow-x: auto;
+      background: #f6f8fa;
+    }
+
+    code {
+      font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    }
+    .site-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .site-header nav {
+      display: flex;
+      gap: 16px;
+    }
+
+    .site-header a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .site-header nav a:hover {
+      text-decoration: underline;
+    }
+
+    .pagination {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      margin: 40px 0;
+    }
+
+    .pagination span {
+      color: #777;
+    }
+    .comments-section {
+      margin-top: 50px;
+    }
+
+    .comments-section h2 {
+      margin-bottom: 20px;
+    }
+  </style>
+
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [
+          ['$', '$'],
+          ['\\(', '\\)']
+        ],
+        displayMath: [
+          ['$$', '$$'],
+          ['\\[', '\\]']
+        ],
+        processEscapes: true
+      }
+    };
+  </script>
+
+  <script defer
+    src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js">
+  </script>
+</head>
+
+<body>
+  <header class="site-header">
+    <a href="/">
+      <strong>cycahu 的博客</strong>
+    </a>
+
+    <nav>
+      <a href="/">首页</a>
+      <a href="/about/">关于</a>
+    </nav>
+  </header>
+
+  <hr>
+
+  <main>
+    <blockquote>
+  <div style="text-align: center;"><span style="font-family: '华文楷体', serif;">
+  洛阳城东桃李花, 飞来飞去落谁家? <br />
+  洛阳女儿惜颜色, 坐见落花长叹息. <br />
+  今年花落颜色改, 明年花开复谁在? <br />
+  已见松柏摧为薪, 更闻桑田变成海. <br />
+  古人无复洛城东, 今人还对落花风. <br />
+  年年岁岁花相似, 岁岁年年人不同. <br />
+  寄言全盛红颜子, 应怜半死白头翁. <br />
+  此翁白头真可怜, 伊昔红颜美少年. <br />
+  公子王孙芳树下, 清歌妙舞落花前. <br />
+  光禄池台文锦绣, 将军楼阁画神仙. <br />
+  一朝卧病无相识, 三春行乐在谁边? <br />
+  宛转蛾眉能几时? 须臾鹤发乱如丝. <br />
+  但看古来歌舞地, 惟有黄昏鸟雀悲. <br />
+  </span></div>
+</blockquote>
+
+<p>今天注定是被历史铭记的一天, 西班牙是冠军, 世界杯的金球奖给了罗德里, 见证了他登上巅峰, 大伤后跌落谷底, 又一步步找回状态. 恍惚间又看到了 2024 年他在英超和欧洲杯无所不能的那个赛季: 我每天独自刷着无尽的习题集, 一场场胜利是我为数不多的精神支柱, 带我走出了最孤独无助的时光. 我曾以为这个美好的故事已至终章, 无数次劝自己放下, 却没想到还有新的一篇.</p>
+
+<p>决赛看完已经是早上, 发现 AI 给出了 $n\ge 3$ 时 Jacobian conjecture 的反例: $
+F(x,y,z) = (
+  (1+xy)^3z + y^2(1+xy)(4+3xy), 
+  y + 3x(1+xy)^2z + 3xy^2(4+3xy), 
+  2x - 3x^2y - x^3z
+): \mathbb{C}^3 \to \mathbb{C}^3
+$, 心情顿时低落几分.</p>
+
+<p>下午, 可能是没睡好, 也可能是 AI 导致的, 学 Functor 怎么也学不下去. AI 不断地解决 open problem, 残酷地向我证明或许真的有一天, AI 的数学能力会全面超过人类. 自私地说, 我可能希望 AI 停下来, 给人类留一片自由玩耍的乐园, 但我知道这绝无可能, 到那时候, 哎.</p>
+
+<p>坐在书桌前, 盯着随机翻开的飞鸟集, 想着 $F(x,y,z)$ 的表达式出了神. 我盼望着那些童话般的故事发生, 但比 AI 发展更无可抵抗的是时间, 我忆起那些如彩虹般绚丽的瞬间, 连它们都无法留下, 又何谈发生奇迹. 耳机中传来伤感的音乐将我拉了回现实, 窗台上的熊童子似乎掉了两片叶子, 悲伤而又喜悦的眼泪划过脸颊.</p>
+
+<p>不能在家呆着了, 晚上出去走了很久很久, 迷茫却未减少半分. 回到家后继续读飞鸟集, 却好像只能看见忧伤与死亡的诗句.</p>
+
+
+    
+      <section class="comments-section">
+        <hr>
+        <h2>评论</h2>
+        <script src="https://giscus.app/client.js"
+        data-repo="cycahu/cycahu.github.io"
+        data-repo-id="R_kgDOTEZJTQ"
+        data-category="Announcements"
+        data-category-id="DIC_kwDOTEZJTc4C_1c7"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="light"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+      </section>
+    
+  </main>
+</body>
+</html>
